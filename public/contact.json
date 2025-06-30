@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Address",
+    "description": "Dhaka 1229, Bangladesh"
+  },
+  {
+    "id": 2,
+    "title": "Email",
+    "description": "ebnybuniad@gmail.com"
+  },
+  {
+    "id": 3,
+    "title": "Phone",
+    "description": "+880 1751 733548"
+  }
+]
