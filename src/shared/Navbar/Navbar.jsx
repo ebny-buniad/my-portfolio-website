@@ -5,8 +5,6 @@ import { Link, NavLink } from 'react-router';
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-
-
 const Navbar = () => {
 
     const navLinks = <>
@@ -29,7 +27,7 @@ const Navbar = () => {
     return (
         <nav className={'fixed top-2 left-0 w-full z-50'}>
             <Container>
-                <div className={`navbar rounded-full border transition-all duration-500 ease-in-out ${scrolled ? 'navbar-bg' : ''}`}>
+                <div className={`navbar rounded-full nav-border transition-all duration-500 ease-in-out ${scrolled ? 'navbar-bg' : ''}`}>
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +49,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <Link to="/">
-                            <img className="w-30 ms-2" src={logo} alt="Logo" />
+                            <img className="w-22 ms-2" src={logo} alt="Logo" />
                         </Link>
                     </div>
 

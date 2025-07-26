@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../Container';
-import banner from '../../../assets/sec-bg.svg'
+// import banner from '../../../assets/sec-bg.svg'
 import { Typewriter } from 'react-simple-typewriter';
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { MdArrowForward } from "react-icons/md";
@@ -15,15 +15,15 @@ const Hero = () => {
             <Container>
                 <div className='lg:grid grid-cols-2 items-center min-h-[100vh]'>
                     <div className="relative order-1 lg:order-2 pt-22 ">
-                        <img
+                        {/* <img
                             className="absolute bottom-0 z-10 w-full"
                             src={banner}
                             alt="Background"
-                        />
+                        /> */}
                         <div className="absolute bottom-0 w-full h-[400px] bg-gradient-to-t from-black via-transparent to-transparent z-30"></div>
                         <img
                             className="relative w-80 xl:w-96 z-20 mx-auto"
-                            src="https://i.ibb.co/0V8DHJQY/buniad-web.png"
+                            src="https://i.ibb.co/HDhSdryv/buniad-web-min.png"
                             alt="Buniad Image"
                         />
 

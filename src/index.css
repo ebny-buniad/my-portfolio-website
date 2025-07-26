@@ -29,12 +29,16 @@ body {
   font-style: normal;
 }
 
-.navbar-bg {
-  background: rgba(255, 255, 255, 0.24);
-  border-radius: 100px;
+.nav-border {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.5px);
-  -webkit-backdrop-filter: blur(8.5px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.navbar-bg {
+  background: rgba(255, 255, 255, 0);
+
+  backdrop-filter: blur(6.6px);
+
 }
 
 a:hover {
@@ -48,7 +52,7 @@ a.active {
 }
 
 .bg {
-  background-image: url('https://i.ibb.co/jXh6BKZ/hero.jpg');
+  background-image: url('https://i.ibb.co/RT7DJRzR/hero-1.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,25 +103,21 @@ a.active {
 
 .hero-btn::before {
   transform: translate3d(-10%, 4.8em, 0) rotate(330deg);
-  background: linear-gradient(
-    25deg,
-    #ed2b5b,
-    rgba(237, 43, 91, 0)
-  );
+  background: linear-gradient(25deg,
+      #ed2b5b,
+      rgba(237, 43, 91, 0));
 }
 
 .hero-btn::after {
   transform: translate3d(10%, 4.8em, 0) rotate(0deg);
-  background: linear-gradient(
-    70deg,
-    rgba(237, 43, 91, 0.5),
-    rgba(255, 103, 133, 0)
-  );
+  background: linear-gradient(70deg,
+      rgba(237, 43, 91, 0.5),
+      rgba(255, 103, 133, 0));
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
- 
+
   transition-property: opacity, transform, color, background;
   transition-duration: 0.3s, 0.3s, 2s, 1.5s, 1s;
   transition-timing-function: ease;
@@ -183,14 +183,17 @@ a.active {
     opacity: 1;
 
   }
+
   33% {
     opacity: 1;
     transform: translateY(30px);
   }
+
   67% {
     opacity: 1;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 0;
     transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
@@ -236,12 +239,10 @@ a.active {
   background: var(--glow-color);
   border: 2.5px solid transparent;
   mask: linear-gradient(#0000, #0000),
-        conic-gradient(
-          from calc((var(--start ) - 0) * 1deg),
-          #0000 0deg,
-          white,
-          transparent 160deg
-        );
+    conic-gradient(from calc((var(--start) - 0) * 1deg),
+      #0000 0deg,
+      white,
+      transparent 160deg);
   mask-composite: intersect;
   mask-clip: padding-box, border-box;
   opacity: 0;
@@ -253,7 +254,7 @@ a.active {
 }
 
 
-.card > * {
+.card>* {
   position: relative;
   z-index: 2;
 }
@@ -261,7 +262,7 @@ a.active {
 
 /* Page Header */
 
-#page-header{
+#page-header {
   background-image: url('https://i.ibb.co/MDf80LG6/page-header.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -269,9 +270,9 @@ a.active {
 }
 
 .content {
-  position: absolute; 
-  left: 0; 
-  right: 0; 
-  margin-inline: auto; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
   width: fit-content;
 }
