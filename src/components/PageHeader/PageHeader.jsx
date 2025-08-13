@@ -1,12 +1,13 @@
 import React from 'react';
+import Container from '../Container/Container';
 
-const PageHeader = ({children}) => {
+const PageHeader = ({ children }) => {
     return (
-        <div id=''>
+        <div>
             <div className='relative'>
-                <img className='h-[400px] w-full object-cover' src="https://i.ibb.co/MDf80LG6/page-header.jpg" alt="" />
+                <img className='h-[400px] w-full object-cover' src="https://i.ibb.co/6cVw4kG6/page-header.jpg" alt="" />
             </div>
-            <div className='content top-50 le'>{children}</div>
+            <div className='content top-40 space-y-3'>{children}</div>
         </div>
     );
 };

@@ -4,6 +4,8 @@ import Container from '../../components/Container/Container';
 import { Link, NavLink } from 'react-router';
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 
 const Navbar = () => {
 
@@ -25,12 +27,25 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={'fixed top-2 left-0 w-full z-50'}>
+        <motion.nav
+            className="fixed top-2 left-0 w-full z-50"
+            initial={{ y: -80, opacity: 0 }}   // Start hidden above
+            animate={{ y: 0, opacity: 1 }}     // Slide down to position
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
             <Container>
-                <div className={`navbar rounded-full nav-border transition-all duration-500 ease-in-out ${scrolled ? 'navbar-bg' : ''}`}>
+                <div
+                    className={`navbar rounded-full nav-border transition-all duration-500 ease-in-out ${scrolled ? "navbar-bg" : ""
+                        }`}
+                >
+                    {/* Navbar Start */}
                     <div className="navbar-start">
                         <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <div
+                                tabIndex={0}
+                                role="button"
+                                className="btn btn-ghost lg:hidden"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5"
@@ -38,7 +53,12 @@ const Navbar = () => {
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
                                 >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h8m-8 6h16"
+                                    />
                                 </svg>
                             </div>
                             <ul
@@ -53,42 +73,39 @@ const Navbar = () => {
                         </Link>
                     </div>
 
+                    {/* Navbar Center */}
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             {navLinks}
                         </ul>
                     </div>
 
+                    {/* Navbar End */}
                     <div className="navbar-end">
-                        <div className='rounded-full h-10 w-10 flex items-center justify-center'>
-                            <Link
-                                className="relative group inline-flex items-center justify-center w-10 h-10 overflow-hidden rounded-full bg-transparent text-black"
-                                to="#">
-                                <span className="absolute inset-0 rounded-full bg-[#ed2b5b] scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center z-0"></span>
-                                <FaLinkedinIn size={18} className="relative z-10 text-white" />
-                            </Link>
-                        </div>
-                        <div className='rounded-full h-10 w-10 flex items-center justify-center'>
-                            <Link
-                                className="relative group inline-flex items-center justify-center w-10 h-10 overflow-hidden rounded-full bg-transparent text-black"
-                                to="#">
-                                <span className="absolute inset-0 rounded-full bg-[#ed2b5b] scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center z-0"></span>
-                                <FaXTwitter  size={18} className="relative z-10 text-white" />
-                            </Link>
-                        </div>
-                        <div className='rounded-full h-10 w-10 flex items-center justify-center'>
-                            <Link
-                                className="relative group inline-flex items-center justify-center w-10 h-10 overflow-hidden rounded-full bg-transparent text-black"
-                                to="#">
-                                <span className="absolute inset-0 rounded-full bg-[#ed2b5b] scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center z-0"></span>
-                                <FaGithub size={18} className="relative z-10 text-white" />
-                            </Link>
-                        </div>
-
+                        {[
+                            { icon: <FaLinkedinIn size={18} />, link: "#" },
+                            { icon: <FaXTwitter size={18} />, link: "#" },
+                            { icon: <FaGithub size={18} />, link: "#" }
+                        ].map((social, i) => (
+                            <div
+                                key={i}
+                                className="rounded-full h-10 w-10 flex items-center justify-center"
+                            >
+                                <Link
+                                    className="relative group inline-flex items-center justify-center w-10 h-10 overflow-hidden rounded-full bg-transparent text-black"
+                                    to={social.link}
+                                >
+                                    <span className="absolute inset-0 rounded-full bg-[#ed2b5b] scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center z-0"></span>
+                                    <span className="relative z-10 text-white">
+                                        {social.icon}
+                                    </span>
+                                </Link>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </Container>
-        </nav>
+        </motion.nav>
     );
 };
 

@@ -27,6 +27,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: #050505;
 }
 
 .nav-border {
@@ -51,8 +52,8 @@ a.active {
   font-weight: 700;
 }
 
-.bg {
-  background-image: url('https://i.ibb.co/RT7DJRzR/hero-1.jpg');
+.hero-bg {
+  background-image: url('https://i.ibb.co.com/GfmNxgmR/studio-background-concept-dark-gradient-purple-studio-room-background-product-1258-53875.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -259,15 +260,7 @@ a.active {
   z-index: 2;
 }
 
-
 /* Page Header */
-
-#page-header {
-  background-image: url('https://i.ibb.co/MDf80LG6/page-header.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 500px;
-}
 
 .content {
   position: absolute;

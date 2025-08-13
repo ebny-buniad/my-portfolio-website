@@ -1,46 +1,50 @@
 import React from 'react';
-import Container from '../Container';
-// import banner from '../../../assets/sec-bg.svg'
+import banner from '../../assets/sec-bg.svg'
 import { Typewriter } from 'react-simple-typewriter';
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import { MdArrowForward } from "react-icons/md";
 import { Link } from 'react-router';
-import Card from '../../Card/Card';
-
+import Container from '../Container/Container';
+import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-
-        <div className=' bg'>
+        <div className='hero-bg'>
             <Container>
-                <div className='lg:grid grid-cols-2 items-center min-h-[100vh]'>
-                    <div className="relative order-1 lg:order-2 pt-22 ">
-                        {/* <img
+                <div className='lg:grid grid-cols-2 items-end min-h-[100vh]'>
+                    <motion.div className="relative order-1 lg:order-2 pt-24"
+                        initial={{ x: 100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <img
                             className="absolute bottom-0 z-10 w-full"
                             src={banner}
                             alt="Background"
-                        /> */}
-                        <div className="absolute bottom-0 w-full h-[400px] bg-gradient-to-t from-black via-transparent to-transparent z-30"></div>
+                        />
                         <img
-                            className="relative w-80 xl:w-96 z-20 mx-auto"
-                            src="https://i.ibb.co/HDhSdryv/buniad-web-min.png"
+                            className="relative bottom-0 w-80 xl:w-96 z-20 mx-auto"
+                            src="https://i.ibb.co.com/FbVPQyCn/buniad-web-min-2.png"
                             alt="Buniad Image"
                         />
 
-
-                        <div class="absolute bottom-10 z-40 flex justify-center w-[10%] left-[45%]">
-                            <div class="chevron"></div>
-                            <div class="chevron"></div>
-                            <div class="chevron"></div>
-                            <span class="text">Scroll down</span>
+                        <div className="absolute bottom-10 z-40 flex justify-center w-[10%] left-[45%]">
+                            <div className="chevron"></div>
+                            <div className="chevron"></div>
+                            <div className="chevron"></div>
+                            <span className="text">Scroll down</span>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className='order-2 lg:order-1 py-5'>
-                        <div className='font-rajdhani space-y-3 md:space-y-6'>
-                            <h4 className='text-3xl font-bold'>HELLO</h4>
-                            <h1 className='text-4xl md:text-7xl font-bold'>i'm Ebny Buniad a</h1>
-                            <h1 className='text-4xl md:text-7xl font-bold primary-color'>
+                    <motion.div className='order-2 lg:order-1 py-5'
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <div className='font-rajdhani space-y-1 md:space-y-5 lg:pb-30 xl:pb-60'>
+                            <h4 className='text-2xl font-bold'>HELLO</h4>
+                            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold'>i'm Ebny Buniad a</h1>
+                            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold primary-color'>
                                 {' '}
                                 <span>
                                     <Typewriter
@@ -62,7 +66,7 @@ const Hero = () => {
                                 <Link to='/projects'><button className='btn hero-btn rounded-full gap-3'>View Projects <MdArrowForward /></button></Link>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </Container>
         </div>
