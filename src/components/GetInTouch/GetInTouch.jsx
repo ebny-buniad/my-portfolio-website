@@ -18,7 +18,7 @@ export default function ContactForm() {
 
   return (
     <Container>
-      <div className="bg-gray-950 border border-gray-700 p-10 py-20 rounded-xl  flex items-center flex-col md:flex-row gap-10">
+      <div className="bg-gray-950 border mb-10 border-gray-700 p-10 py-20 rounded-xl  flex items-center flex-col md:flex-row gap-10">
         {/* Left Side Text */}
         <div className="flex-1">
           <p className="primary-color font-semibold uppercase">Get in Touch</p>
@@ -26,9 +26,7 @@ export default function ContactForm() {
             Elevate your brand <br /> with Me
           </h2>
           <p className="mt-4 text-gray-400">
-            ished fact that a reader will be distrol acted bioiiy desig ished fact
-            that a reader will acted ished fact that a reader will be distrol
-            acted
+            Let's collaborate to create impactful designs and strategies that elevate your brand, connect with audiences, and drive lasting growth.
           </p>
         </div>
 
