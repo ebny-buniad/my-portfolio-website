@@ -11,6 +11,10 @@
   color: #ed2b5b;
 }
 
+.primary-bg{
+  background-color: #ed2b5b;
+}
+
 .font-rajdhani {
   font-family: "Rajdhani", sans-serif;
   font-style: normal;
@@ -35,11 +39,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
-.navbar-bg {
+.glass-bg {
   background: rgba(255, 255, 255, 0);
-
   backdrop-filter: blur(6.6px);
-
 }
 
 a:hover {

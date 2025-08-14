@@ -35,7 +35,7 @@ const Navbar = () => {
         >
             <Container>
                 <div
-                    className={`navbar rounded-full nav-border transition-all duration-500 ease-in-out ${scrolled ? "navbar-bg" : ""
+                    className={`navbar rounded-full nav-border transition-all duration-500 ease-in-out ${scrolled ? "glass-bg" : ""
                         }`}
                 >
                     {/* Navbar Start */}
