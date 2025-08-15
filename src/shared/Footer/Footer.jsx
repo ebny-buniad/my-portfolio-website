@@ -13,6 +13,7 @@ const Footer = () => {
                     <img className='mx-auto w-15' src={line} alt="" />
                 </nav>
                 <nav className="grid grid-flow-col gap-4">
+                    <Link to='/'>Home</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/projects'>Projects</Link>
                     <Link to='/blogs'>Blogs</Link>
@@ -20,7 +21,7 @@ const Footer = () => {
                 </nav>
 
                 <aside>
-                    <p>Copyright © {new Date().getFullYear()} - E.Buniad</p>
+                    <p>© {new Date().getFullYear()} - E.Buniad</p>
                 </aside>
             </footer>
         </div>

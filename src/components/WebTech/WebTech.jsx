@@ -3,8 +3,6 @@ import Container from '../Container/Container';
 import Title from '../Title/Title';
 
 import { webTech } from '../../data/data';
-console.log(webTech)
-
 const WebTech = () => {
     return (
         <div>

@@ -18,7 +18,8 @@ export default function ContactForm() {
 
   return (
     <Container>
-      <div className="bg-gray-950 border mb-10 border-gray-700 p-10 py-20 rounded-xl  flex items-center flex-col md:flex-row gap-10">
+      <div className="bg-gray-950 border mb-10 border-gray-700 px-2 lg:px-10 
+      py-20 rounded-xl  flex items-center flex-col md:flex-row gap-10">
         {/* Left Side Text */}
         <div className="flex-1">
           <p className="primary-color font-semibold uppercase">Get in Touch</p>

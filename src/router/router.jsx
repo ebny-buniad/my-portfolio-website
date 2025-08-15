@@ -7,6 +7,7 @@ import Blog from "../pages/Blog/Blog";
 import Contact from "../pages/Contact/Contact";
 import DashboardLayout from "../layout/DashboardLayout";
 import AddProjects from "../pages/Dashboard/AddProjects/AddProjects";
+import ProjectDetails from "../pages/Projects/ProjectDetails";
 
 export const router = createBrowserRouter([
     {
@@ -26,13 +27,17 @@ export const router = createBrowserRouter([
                 Component: Projects
             },
             {
+                path: 'project/details/:id',
+                Component: ProjectDetails
+            },
+            {
                 path: 'blog',
                 Component: Blog
             },
             {
                 path: 'contact',
                 Component: Contact,
-                loader: ()=> fetch('/contact.json')
+                loader: () => fetch('/contact.json')
             }
         ]
     },
